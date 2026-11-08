@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dasbor Perusahaan - SkillSync</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="../assets/css/dashboard-perusahaan.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav class="sidebar">
+        <div class="sidebar-header"><i class="fas fa-building"></i><span>SkillSync</span></div>
+        <ul class="nav flex-column sidebar-nav" id="sidebar-tab" role="tablist">
+          <li class="nav-item" role="presentation"><a class="nav-link active" id="dasbor-tab" data-bs-toggle="tab" href="#dasbor-content" role="tab" aria-controls="dasbor-content" aria-selected="true"><i class="fas fa-tachometer-alt"></i> Dasbor</a></li>
+          <li class="nav-item" role="presentation"><a class="nav-link" id="proyek-tab" data-bs-toggle="tab" href="#proyek-content" role="tab" aria-controls="proyek-content" aria-selected="false"><i class="fas fa-briefcase"></i> Manajemen Proyek</a></li>
+          <li class="nav-item" role="presentation"><a class="nav-link" id="pelamar-tab" data-bs-toggle="tab" href="#pelamar-content" role="tab" aria-controls="pelamar-content" aria-selected="false"><i class="fas fa-users"></i> Manajemen Pelamar</a></li>
+          <li class="nav-item" role="presentation"><a class="nav-link" id="pengaturan-tab" data-bs-toggle="tab" href="#pengaturan-content" role="tab" aria-controls="pengaturan-content" aria-selected="false"><i class="fas fa-cog"></i> Pengaturan & Tagihan</a></li>
+        </ul>
+      </nav>
+
+      <main class="main-content">
+        <header class="main-header">
+          <div>
+            <h2 class="h4 mb-0">Selamat Datang, Tim HR!</h2>
+            <p class="text-muted mb-0">Berikut adalah ringkasan aktivitas perusahaan Anda.</p>
+          </div>
+          <div class="user-profile"><i class="fas fa-bell fs-5 text-muted"></i><img src="https://i.pravatar.cc/150?u=companyHR" alt="User Avatar"/></div>
+        </header>
+
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="dasbor-content" role="tabpanel" aria-labelledby="dasbor-tab">
+            <div class="row g-4">
+              <div class="col-md-4"><div class="card summary-card bg-primary p-3"><div class="card-body d-flex justify-content-between align-items-center"><div><div class="value">25</div><div class="title">Proyek Dipublikasikan</div></div><i class="fas fa-file-alt icon"></i></div></div></div>
+              <div class="col-md-4"><div class="card summary-card bg-success p-3"><div class="card-body d-flex justify-content-between align-items-center"><div><div class="value">312</div><div class="title">Total Pelamar</div></div><i class="fas fa-users icon"></i></div></div></div>
+              <div class="col-md-4"><div class="card summary-card bg-warning text-dark p-3"><div class="card-body d-flex justify-content-between align-items-center"><div><div class="value">8</div><div class="title">Proyek Aktif</div></div><i class="fas fa-briefcase icon"></i></div></div></div>
+            </div>
+            <div class="card mt-4">
+              <div class="card-header bg-white border-0 py-3"><h5 class="mb-0">Daftar Pelamar Terbaru</h5></div>
+              <div class="card-body">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item d-flex justify-content-between align-items-center"><div class="d-flex align-items-center"><img src="https://i.pravatar.cc/150?u=budi" width="40" height="40" class="rounded-circle me-3"/><div><strong>Budi Santoso</strong> melamar untuk <span class="text-primary">Website UMKM</span></div></div><a href="#" class="btn btn-outline-primary btn-sm">Lihat Profil</a></li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center"><div class="d-flex align-items-center"><img src="https://i.pravatar.cc/150?u=siti" width="40" height="40" class="rounded-circle me-3"/><div><strong>Siti Aminah</strong> melamar untuk <span class="text-primary">Analisis Data Penjualan</span></div></div><a href="#" class="btn btn-outline-primary btn-sm">Lihat Profil</a></li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center"><div class="d-flex align-items-center"><img src="https://i.pravatar.cc/150?u=dewi" width="40" height="40" class="rounded-circle me-3"/><div><strong>Dewi Lestari</strong> melamar untuk <span class="text-primary">Desain UI/UX Aplikasi</span></div></div><a href="#" class="btn btn-outline-primary btn-sm">Lihat Profil</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="tab-pane fade" id="proyek-content" role="tabpanel" aria-labelledby="proyek-tab">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <h3 class="h5">Daftar Semua Proyek</h3>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#buatProyekModal"><i class="fas fa-plus me-2"></i>Buat Proyek Baru</button>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-hover align-middle">
+                    <thead class="table-light"><tr><th>Nama Proyek</th><th>Total Pelamar</th><th>Tanggal Dibuat</th><th>Status</th><th>Aksi</th></tr></thead>
+                    <tbody>
+                      <tr><td><strong>Website UMKM</strong></td><td>15</td><td>20 Sep 2025</td><td><span class="badge bg-success-subtle text-success-emphasis">Aktif</span></td><td><button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#lihatPelamarModal" data-project-title="Website UMKM">Lihat Pelamar</button></td></tr>
+                      <tr><td><strong>Analisis Data Penjualan</strong></td><td>42</td><td>15 Sep 2025</td><td><span class="badge bg-success-subtle text-success-emphasis">Aktif</span></td><td><button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#lihatPelamarModal" data-project-title="Analisis Data Penjualan">Lihat Pelamar</button></td></tr>
+                      <tr><td><strong>Desain UI/UX Aplikasi</strong></td><td>25</td><td>10 Sep 2025</td><td><span class="badge bg-secondary-subtle text-secondary-emphasis">Selesai</span></td><td><a href="#" class="btn btn-sm btn-outline-secondary disabled">Lihat Pelamar</a></td></tr>
+                      <tr><td><strong>Content Marketing Campaign</strong></td><td>0</td><td>01 Okt 2025</td><td><span class="badge bg-warning-subtle text-warning-emphasis">Draf</span></td><td><a href="#" class="btn btn-sm btn-outline-primary">Lanjutkan</a></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="pelamar-content" role="tabpanel" aria-labelledby="pelamar-tab">
+            <h3 class="h5 mb-4">Tinjau Kandidat Proyek: "Website UMKM"</h3>
+            <div class="row g-4">
+              <div class="col-md-6 col-lg-4">
+                  <div class="card applicant-card h-100"><div class="card-body text-center d-flex flex-column"><img src="https://i.pravatar.cc/150?u=budi" class="rounded-circle mx-auto mb-3" width="100" height="100"/><h5 class="card-title">Budi Santoso</h5><p class="text-muted mb-2">Universitas Gadjah Mada</p><div class="mb-3"><span class="badge bg-primary-subtle text-primary-emphasis">HTML</span> <span class="badge bg-primary-subtle text-primary-emphasis">CSS</span> <span class="badge bg-primary-subtle text-primary-emphasis">PHP</span></div><div class="mt-auto"><a href="#" class="btn btn-outline-primary btn-sm mb-3 w-100" data-bs-toggle="modal" data-bs-target="#profilPelamarModal" data-applicant-id="budi">Lihat Profil Lengkap</a><div class="btn-group"><button class="btn btn-outline-danger">Tolak</button><button class="btn btn-outline-primary">Simpan</button><button class="btn btn-success">Terima</button></div></div></div></div>
+              </div>
+              <div class="col-md-6 col-lg-4">
+                  <div class="card applicant-card h-100"><div class="card-body text-center d-flex flex-column"><img src="https://i.pravatar.cc/150?u=rina" class="rounded-circle mx-auto mb-3" width="100" height="100"/><h5 class="card-title">Rina Hartati</h5><p class="text-muted mb-2">Institut Teknologi Bandung</p><div class="mb-3"><span class="badge bg-primary-subtle text-primary-emphasis">JavaScript</span> <span class="badge bg-primary-subtle text-primary-emphasis">React</span> <span class="badge bg-primary-subtle text-primary-emphasis">Node.js</span></div><div class="mt-auto"><a href="#" class="btn btn-outline-primary btn-sm mb-3 w-100" data-bs-toggle="modal" data-bs-target="#profilPelamarModal" data-applicant-id="rina">Lihat Profil Lengkap</a><div class="btn-group"><button class="btn btn-outline-danger">Tolak</button><button class="btn btn-outline-primary">Simpan</button><button class="btn btn-success">Terima</button></div></div></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="pengaturan-content" role="tabpanel" aria-labelledby="pengaturan-tab">
+            <div class="card"><div class="card-header"><ul class="nav nav-tabs card-header-tabs" id="settings-subtab" role="tablist"><li class="nav-item" role="presentation"><button class="nav-link active" id="profil-subtab" data-bs-toggle="tab" data-bs-target="#profil-subcontent" type="button" role="tab">Profil Perusahaan</button></li><li class="nav-item" role="presentation"><button class="nav-link" id="tagihan-subtab" data-bs-toggle="tab" data-bs-target="#tagihan-subcontent" type="button" role="tab">Riwayat Transaksi</button></li></ul></div><div class="card-body"><div class="tab-content" id="settings-subtab-content"><div class="tab-pane fade show active" id="profil-subcontent" role="tabpanel"><h5>Edit Profil Perusahaan</h5><form class="row g-3 mt-3"><div class="col-md-6"><label class="form-label">Nama Perusahaan</label><input type="text" class="form-control" value="Perusahaan Maju"/></div><div class="col-md-6"><label class="form-label">Email Kontak</label><input type="email" class="form-control" value="contact@perusahaanmaju.com"/></div><div class="col-12"><label class="form-label">Deskripsi Singkat</label><textarea class="form-control" rows="3">Kami adalah perusahaan teknologi terdepan.</textarea></div><div class="col-12"><label class="form-label">Logo Perusahaan</label><input class="form-control" type="file"/></div><div class="col-12"><button type="submit" class="btn btn-primary">Simpan Perubahan</button></div></form></div><div class="tab-pane fade" id="tagihan-subcontent" role="tabpanel"><h5>Riwayat Tagihan</h5><table class="table mt-3"><thead><tr><th>ID Transaksi</th><th>Deskripsi</th><th>Tanggal</th><th>Jumlah</th><th>Status</th></tr></thead><tbody><tr><td>#INV-00123</td><td>Match Fee: Proyek Website UMKM</td><td>25 Sep 2025</td><td>Rp 500.000</td><td><span class="badge bg-success">Lunas</span></td></tr></tbody></table></div></div></div></div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="modal fade" id="buatProyekModal" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Buat Proyek Baru</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><form id="formBuatProyek"><div class="mb-3"><label class="form-label">Nama Proyek</label><input type="text" class="form-control" placeholder="Contoh: Website UMKM Kuliner" required></div><div class="mb-3"><label class="form-label">Deskripsi Lengkap Proyek</label><textarea class="form-control" rows="5" placeholder="Jelaskan detail pekerjaan, tanggung jawab, dan kriteria yang dicari." required></textarea></div><div class="mb-3"><label class="form-label">Keahlian yang Dibutuhkan</label><input type="text" class="form-control" placeholder="Contoh: PHP, JavaScript, CSS, SEO (pisahkan dengan koma)"></div></form></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button><button type="button" class="btn btn-primary" id="btn-publikasikan-proyek">Publikasikan Proyek</button></div></div></div></div>
+    <div class="modal fade" id="lihatPelamarModal" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Daftar Pelamar</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><ul class="list-group list-group-flush"><li class="list-group-item d-flex justify-content-between align-items-center"><div class="d-flex align-items-center"><img src="https://i.pravatar.cc/150?u=budi" width="40" height="40" class="rounded-circle me-3"/><div><h6 class="mb-0">Budi Santoso</h6><small class="text-muted">Universitas Gadjah Mada</small></div></div><div><a href="#" class="btn btn-outline-primary btn-sm">Lihat Profil</a> <button class="btn btn-success btn-sm">Terima</button></div></li><li class="list-group-item d-flex justify-content-between align-items-center"><div class="d-flex align-items-center"><img src="https://i.pravatar.cc/150?u=rina" width="40" height="40" class="rounded-circle me-3"/><div><h6 class="mb-0">Rina Hartati</h6><small class="text-muted">Institut Teknologi Bandung</small></div></div><div><a href="#" class="btn btn-outline-primary btn-sm">Lihat Profil</a> <button class="btn btn-success btn-sm">Terima</button></div></li><li class="list-group-item d-flex justify-content-between align-items-center"><div class="d-flex align-items-center"><img src="https://i.pravatar.cc/150?u=dewi" width="40" height="40" class="rounded-circle me-3"/><div><h6 class="mb-0">Dewi Lestari</h6><small class="text-muted">Universitas Indonesia</small></div></div><div><a href="#" class="btn btn-outline-primary btn-sm">Lihat Profil</a> <button class="btn btn-success btn-sm">Terima</button></div></li></ul></div></div></div></div>
+    <div class="modal fade" id="profilPelamarModal" tabindex="-1" aria-hidden="true"><div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title">Profil Pelamar</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="row"><div class="col-md-4 text-center"><img src="" id="modalApplicantPhoto" class="rounded-circle mb-3" width="120" height="120" alt="Foto Pelamar"><h5 class="fw-bold" id="modalApplicantName"></h5><p class="text-muted" id="modalApplicantUniv"></p></div><div class="col-md-8"><h6 class="fw-bold">Tentang Saya</h6><p id="modalApplicantAbout" class="text-muted"></p><h6 class="fw-bold mt-4">Keahlian (Skills)</h6><div id="modalApplicantSkills"></div><h6 class="fw-bold mt-4">Dokumen</h6><a href="#" id="btn-unduh-cv" class="btn btn-primary btn-sm" target="_blank"><i class="fas fa-download me-2"></i>Unduh CV</a> <a href="#" id="btn-lihat-portofolio" class="btn btn-outline-primary btn-sm" target="_blank"><i class="fas fa-external-link-alt me-2"></i>Lihat Portofolio</a></div></div></div><div class="modal-footer"><button type="button" class="btn btn-outline-danger">Tolak</button><button type="button" class="btn btn-success" data-bs-dismiss="modal">Terima Kandidat</button></div></div></div></div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/perusahaan.js"></script>
+  </body>
+</html>

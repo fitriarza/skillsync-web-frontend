@@ -1,0 +1,59 @@
+<div>
+  <div class="mb-4">
+    <a href="#" class="btn btn-light" id="btn-kembali-ke-daftar">
+      <i class="fas fa-arrow-left me-2"></i>Kembali ke Daftar Proyek
+    </a>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title fw-bold">{{judulProyek}}</h2>
+          <p class="text-muted fs-5">{{namaPerusahaan}} - {{lokasi}}</p>
+
+          <div class="my-4" id="skills-container">
+            </div>
+          
+          <hr>
+
+          <h5 class="fw-bold mt-4">Deskripsi Pekerjaan</h5>
+          <p>{{deskripsi}}</p>
+
+          <h5 class="fw-bold mt-4">Tanggung Jawab</h5>
+          <ul id="tanggungJawab-container">
+            </ul>
+
+          <h5 class="fw-bold mt-4">Kualifikasi</h5>
+          <ul id="kualifikasi-container">
+            </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="fw-bold">Siap Berkontribusi?</h5>
+          <p class="text-muted small">Lamaran Anda akan langsung ditinjau oleh tim rekrutmen dari {{namaPerusahaan}}.</p>
+          <button class="btn btn-primary w-100 btn-lg" id="btn-ajukan-lamaran">
+            <i class="fas fa-paper-plane me-2"></i>Ajukan Lamaran
+          </button>
+        </div>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-body">
+          <h5 class="card-title fw-bold mb-3">Tentang Perusahaan</h5>
+          <div class="d-flex align-items-center">
+            <img src="{{logoPerusahaan}}" width="50" height="50" class="rounded-circle me-3" alt="Logo Perusahaan">
+            <div>
+              <h6 class="mb-0">{{namaPerusahaan}}</h6>
+              <small class="text-muted">{{industriPerusahaan}}</small>
+            </div>
+          </div>
+          <p class="mt-3 small text-muted">{{tentangPerusahaan}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

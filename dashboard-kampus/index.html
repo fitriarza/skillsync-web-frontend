@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dasbor Institusi - SkillSync</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="../assets/css/dashboard-kampus.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav class="sidebar">
+        <div class="sidebar-header">
+          <i class="fas fa-building-columns"></i>
+          <span>SkillSync</span>
+        </div>
+        <ul class="nav flex-column sidebar-nav" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <li class="nav-item"><a class="nav-link active" id="dasbor-tab" data-bs-toggle="pill" href="#dasbor-content" role="tab"><i class="fas fa-chart-pie"></i>Dasbor Utama</a></li>
+          <li class="nav-item"><a class="nav-link" id="mahasiswa-tab" data-bs-toggle="pill" href="#mahasiswa-content" role="tab"><i class="fas fa-user-graduate"></i>Manajemen Mahasiswa</a></li>
+          <li class="nav-item"><a class="nav-link" id="monitoring-tab" data-bs-toggle="pill" href="#monitoring-content" role="tab"><i class="fas fa-desktop"></i>Monitoring Proyek</a></li>
+          <li class="nav-item"><a class="nav-link" id="pengaturan-tab" data-bs-toggle="pill" href="#pengaturan-content" role="tab"><i class="fas fa-cogs"></i>Pengaturan & Langganan</a></li>
+        </ul>
+      </nav>
+
+      <div class="main-content">
+        <div class="tab-content" id="v-pills-tabContent">
+          <div class="tab-pane fade show active" id="dasbor-content" role="tabpanel">
+            <h2 class="h4 mb-4">Dasbor Analitik Institusi</h2>
+            <div class="row g-4">
+              <div class="col-md-4">
+                <a href="#" class="text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#kpiDetailModal" data-bs-title="Detail Mahasiswa Aktif" data-bs-type="mahasiswa">
+                  <div class="card kpi-card"><div class="card-body"><div class="value">480</div><div class="title text-muted">Total Mahasiswa Aktif</div></div></div>
+                </a>
+              </div>
+              <div class="col-md-4">
+                <a href="#" class="text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#kpiDetailModal" data-bs-title="Detail Proyek Selesai" data-bs-type="proyek">
+                  <div class="card kpi-card" style="border-left-color: #198754"><div class="card-body"><div class="value">125</div><div class="title text-muted">Proyek Selesai</div></div></div>
+                </a>
+              </div>
+              <div class="col-md-4">
+                <a href="#" class="text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#kpiDetailModal" data-bs-title="Detail Perusahaan Mitra" data-bs-type="mitra">
+                  <div class="card kpi-card" style="border-left-color: #ffc107"><div class="card-body"><div class="value">85</div><div class="title text-muted">Perusahaan Mitra</div></div></div>
+                </a>
+              </div>
+            </div>
+            <div class="row g-4 mt-3">
+              <div class="col-lg-7"><div class="card"><div class="card-body"><h5 class="card-title">Aktivitas Proyek Mahasiswa (6 Bulan Terakhir)</h5><canvas id="aktivitasChart"></canvas></div></div></div>
+              <div class="col-lg-5"><div class="card"><div class="card-body"><h5 class="card-title">Sebaran Industri Perusahaan Mitra</h5><canvas id="industriChart"></canvas></div></div></div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="mahasiswa-content" role="tabpanel">
+            <h2 class="h4 mb-4">Manajemen Data Mahasiswa</h2>
+            <div class="card mb-4">
+              <div class="card-body">
+                <h5 class="card-title">Daftarkan Mahasiswa Secara Massal</h5>
+                <p class="text-muted">Unggah file CSV yang berisi daftar mahasiswa (NIM, Nama, Jurusan, Email) untuk dibuatkan akun premium.</p>
+                <div class="file-uploader"><i class="fas fa-cloud-upload-alt mb-3"></i><p>Tarik & letakkan file CSV di sini, atau klik untuk memilih file.</p><button class="btn btn-primary">Pilih File</button></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Daftar Mahasiswa Terverifikasi</h5>
+                <div class="table-responsive">
+                  <table class="table table-hover mt-3">
+                    <thead><tr><th>Nama Mahasiswa</th><th>NIM</th><th>Jurusan</th><th>Status Aktivitas</th></tr></thead>
+                    <tbody>
+                      <tr><td>Budi Santoso</td><td>12345678</td><td>Teknik Informatika</td><td><span class="badge bg-primary">Sedang Mengerjakan</span></td></tr>
+                      <tr><td>Siti Aminah</td><td>87654321</td><td>Sistem Informasi</td><td><span class="badge bg-success">Sudah Selesai</span></td></tr>
+                      <tr><td>Dewi Lestari</td><td>11223344</td><td>Desain Komunikasi Visual</td><td><span class="badge bg-warning">Belum Dapat Proyek</span></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="monitoring-content" role="tabpanel">
+            <h2 class="h4 mb-4">Monitoring Aktivitas Proyek</h2>
+            <div class="card">
+              <div class="card-body">
+                <div class="row g-3 align-items-center mb-3 pb-3 border-bottom">
+                  <div class="col-md-4"><input type="text" class="form-control" placeholder="Cari mahasiswa..."/></div>
+                  <div class="col-md-4"><input type="text" class="form-control" placeholder="Cari perusahaan..."/></div>
+                  <div class="col-md-3"><input type="date" class="form-control" /></div>
+                  <div class="col-md-1"><button class="btn btn-primary w-100">Filter</button></div>
+                </div>
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead><tr><th>Mahasiswa</th><th>Proyek</th><th>Perusahaan Mitra</th><th>Progress</th></tr></thead>
+                    <tbody>
+                      <tr>
+                        <td>Budi Santoso</td><td>Pengembangan Website UMKM</td><td>PT Maju Jaya</td>
+                        <td><div class="progress" style="height: 20px"><div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div></div></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="pengaturan-content" role="tabpanel">
+            <h2 class="h4 mb-4">Pengaturan Akun & Langganan</h2>
+            <div class="card">
+              <div class="card-header bg-primary text-white"><h5 class="mb-0">Detail Paket Langganan Anda</h5></div>
+              <div class="card-body p-4">
+                <div class="row align-items-center">
+                  <div class="col-md-8">
+                    <p class="fs-5">Paket Aktif: <strong class="text-primary">Institusi Premium</strong></p>
+                    <p class="mb-2">Kuota Akun Mahasiswa Terpakai</p>
+                    <div class="progress" style="height: 25px"><div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="350" aria-valuemin="0" aria-valuemax="500">350 / 500 Akun</div></div>
+                    <p class="mt-3 text-muted">Langganan Anda akan diperpanjang secara otomatis pada tanggal <strong>1 Desember 2025</strong>.</p>
+                  </div>
+                  <div class="col-md-4 text-md-end">
+                    <button class="btn btn-outline-primary mb-2 w-100">Lihat Riwayat Tagihan</button>
+                    <button class="btn btn-success w-100">Kelola Langganan</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="kpiDetailModal" tabindex="-1" aria-labelledby="kpiDetailModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="kpiDetailModalLabel">Detail Data</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div id="kpiModalContent"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../assets/js/kampus.js"></script>
+  </body>
+</html>

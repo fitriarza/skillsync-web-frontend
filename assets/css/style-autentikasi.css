@@ -1,0 +1,217 @@
+/* General Styling */
+:root {
+  --kampus-color: #1e7e34;
+  --mahasiswa-color: #ffc107;
+  --perusahaan-color: #004085;
+  --light-grey: #f8f9fa;
+  --dark-text: #343a40;
+  --border-color: #dee2e6;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--light-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--dark-text);
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  padding: 20px;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 10px auto;
+  width: 180px;
+  height: auto;
+}
+
+h2,
+h3 {
+  text-align: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Role Selection Styling */
+.selection-container h2 {
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+}
+
+.role-options {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.role-card {
+  color: white;
+  padding: 25px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.role-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.role-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+}
+
+.role-card p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+#kampus-card {
+  background-color: var(--kampus-color);
+}
+#mahasiswa-card {
+  background-color: var(--mahasiswa-color);
+  color: var(--dark-text);
+}
+#perusahaan-card {
+  background-color: var(--perusahaan-color);
+}
+
+/* Auth Form Styling */
+.auth-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.form-wrapper .welcome-text {
+  margin-bottom: 5px;
+}
+.form-wrapper .subtitle {
+  text-align: center;
+  margin-top: 0;
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.auth-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tab-nav {
+  display: flex;
+  border-bottom: 2px solid var(--border-color);
+  margin-bottom: 25px;
+}
+
+.tab-link {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #6c757d;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.tab-link.active {
+  color: var(--theme-color);
+  border-bottom: 3px solid var(--theme-color);
+}
+
+/* Form Elements */
+.form-panel {
+  display: none;
+}
+.form-panel.active {
+  display: block;
+}
+
+.form-panel h3 {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Important */
+}
+
+form input:focus {
+  outline: none;
+  border-color: var(--theme-color);
+  box-shadow: 0 0 0 2px var(--theme-color-light);
+}
+
+form .btn {
+  padding: 12px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  background-color: var(--theme-color);
+}
+
+form .btn:hover {
+  opacity: 0.9;
+}
+
+/* Color Theming */
+.theme-kampus {
+  --theme-color: var(--kampus-color);
+  --theme-color-light: #28a74533;
+}
+.theme-mahasiswa {
+  --theme-color: var(--mahasiswa-color);
+  --theme-color-light: #ffc10733;
+}
+.theme-perusahaan {
+  --theme-color: var(--perusahaan-color);
+  --theme-color-light: #007bff33;
+}
+
+.theme-mahasiswa .btn {
+  color: var(--dark-text);
+}
+.auth-title {
+  font-size: 2.5rem; /* Atur ukuran font */
+  color: #004085; /* Ganti dengan kode warna biru web Anda jika berbeda */
+  text-align: center; /* Posisikan di tengah */
+  margin-bottom: 20px; /* Beri jarak ke bawah */
+}

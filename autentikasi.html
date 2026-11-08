@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Masuk atau Daftar - SkillSync</title>
+    <link rel="stylesheet" href="assets\css\style-autentikasi.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div id="role-selection" class="selection-container">
+        <img
+          src="assets\images\SkillSync.png"
+          alt="SkillSync Logo"
+          class="logo"
+        />
+        <h2>Kamu adalah?</h2>
+        <div class="role-options">
+          <div class="role-card" id="kampus-card" data-role="kampus">
+            <h3>🏛️ Kampus</h3>
+            <p>Verifikasi mahasiswa dan pantau kemajuan karir mereka.</p>
+          </div>
+          <div class="role-card" id="mahasiswa-card" data-role="mahasiswa">
+            <h3>🎓 Mahasiswa</h3>
+            <p>Cari proyek, bangun portofolio dan mulai karirmu.</p>
+          </div>
+          <div class="role-card" id="perusahaan-card" data-role="perusahaan">
+            <h3>🏢 Perusahaan</h3>
+            <p>Posting proyek dan temukan talenta vokasi terbaik.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="auth-container" class="auth-container hidden">
+        <div id="kampus-forms" class="form-wrapper hidden">
+          <h1 class="auth-title">SkillSync</h1>
+          <h2 class="welcome-text">Selamat Datang, Kampus! 👋</h2>
+          <p class="subtitle">Mulai Petualangan Karir mu di SkillSync</p>
+          <div class="auth-card theme-kampus">
+            <div class="tab-nav">
+              <button class="tab-link active" data-tab="register">
+                Daftar
+              </button>
+              <button class="tab-link" data-tab="login">Masuk</button>
+            </div>
+            <div class="tab-content">
+              <div class="form-panel active" data-form="register">
+                <h3>Ayo, Daftarkan Akunmu!</h3>
+                <form>
+                  <input
+                    type="text"
+                    placeholder="Nama Institusi/Kampus"
+                    required
+                  />
+                  <input
+                    type="email"
+                    placeholder="Email Resmi Kampus"
+                    required
+                  />
+                  <input type="text" placeholder="Nama Admin" required />
+                  <input
+                    type="password"
+                    placeholder="Buat Kata Sandi"
+                    required
+                  />
+                  <input
+                    type="password"
+                    placeholder="Konfirmasi Kata Sandi"
+                    required
+                  />
+                  <button type="submit" class="btn">Daftar</button>
+                </form>
+              </div>
+              <div class="form-panel" data-form="login">
+                <h3>Selamat Datang Kembali!</h3>
+                <form>
+                  <input type="email" placeholder="Alamat Email" required />
+                  <input type="password" placeholder="Kata Sandi" required />
+                  <button type="submit" class="btn">Masuk</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="mahasiswa-forms" class="form-wrapper hidden">
+          <h1 class="auth-title">SkillSync</h1>
+          <h2 class="welcome-text">Selamat Datang, Mahasiswa! 👋</h2>
+          <p class="subtitle">Mulai Petualangan Karir mu di SkillSync</p>
+          <div class="auth-card theme-mahasiswa">
+            <div class="tab-nav">
+              <button class="tab-link active" data-tab="register">
+                Daftar
+              </button>
+              <button class="tab-link" data-tab="login">Masuk</button>
+            </div>
+            <div class="tab-content">
+              <div class="form-panel active" data-form="register">
+                <h3>Ayo, Daftarkan Akunmu!</h3>
+                <form>
+                  <input type="text" placeholder="Nama Lengkap" required />
+                  <input type="text" placeholder="Asal Institusi" required />
+                  <input type="email" placeholder="Alamat Email" required />
+                  <input
+                    type="password"
+                    placeholder="Buat Kata Sandi"
+                    required
+                  />
+                  <input
+                    type="password"
+                    placeholder="Konfirmasi Kata Sandi"
+                    required
+                  />
+                  <button type="submit" class="btn">Daftar</button>
+                </form>
+              </div>
+              <div class="form-panel" data-form="login">
+                <h3>Selamat Datang Kembali!</h3>
+                <form>
+                  <input type="email" placeholder="Alamat Email" required />
+                  <input type="password" placeholder="Kata Sandi" required />
+                  <button type="submit" class="btn">Masuk</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="perusahaan-forms" class="form-wrapper hidden">
+          <h1 class="auth-title">SkillSync</h1>
+          <h2 class="welcome-text">Selamat Datang, Perusahaan! 👋</h2>
+          <p class="subtitle">Mulai Petualangan Karir mu di SkillSync</p>
+          <div class="auth-card theme-perusahaan">
+            <div class="tab-nav">
+              <button class="tab-link active" data-tab="register">
+                Daftar
+              </button>
+              <button class="tab-link" data-tab="login">Masuk</button>
+            </div>
+            <div class="tab-content">
+              <div class="form-panel active" data-form="register">
+                <h3>Ayo, Daftarkan Akunmu!</h3>
+                <form>
+                  <input type="text" placeholder="Nama Perusahaan" required />
+                  <input
+                    type="email"
+                    placeholder="Alamat Email Perusahaan"
+                    required
+                  />
+                  <input
+                    type="text"
+                    placeholder="Nama PIC (Person in Charge)"
+                    required
+                  />
+                  <input
+                    type="password"
+                    placeholder="Buat Kata Sandi"
+                    required
+                  />
+                  <input
+                    type="password"
+                    placeholder="Konfirmasi Kata Sandi"
+                    required
+                  />
+                  <button type="submit" class="btn">Daftar</button>
+                </form>
+              </div>
+              <div class="form-panel" data-form="login">
+                <h3>Selamat Datang Kembali!</h3>
+                <form>
+                  <input type="email" placeholder="Alamat Email" required />
+                  <input type="password" placeholder="Kata Sandi" required />
+                  <button type="submit" class="btn">Masuk</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/autentikasi.js"></script>
+  </body>
+</html>

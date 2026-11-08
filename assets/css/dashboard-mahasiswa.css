@@ -1,0 +1,201 @@
+:root {
+  --primary-color: #2563eb;
+  --main-bg-color: #f7f8fa;
+  --text-secondary-color: #6b7280;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--main-bg-color);
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* --- Sidebar Styling --- */
+.sidebar {
+  width: 260px;
+  background: #ffffff;
+  color: #333;
+  transition: all 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+  z-index: 1000;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar .sidebar-header {
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+  border-bottom: 1px solid #e9ecef;
+  color: var(--primary-color);
+}
+
+.sidebar .sidebar-header .fa-graduation-cap {
+  margin-right: 10px;
+}
+
+.sidebar-nav {
+  padding: 20px 0;
+  flex-grow: 1; /* Membuat nav mengisi sisa ruang */
+}
+
+.sidebar-nav .nav-link {
+  padding: 12px 25px;
+  font-size: 1rem;
+  color: #555;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
+  border-right: 4px solid transparent;
+}
+
+.sidebar-nav .nav-link i {
+  width: 25px;
+  margin-right: 15px;
+  text-align: center;
+}
+
+.sidebar-nav .nav-link:hover,
+.sidebar-nav .nav-link.active {
+  background-color: #e9f2ff;
+  color: #0d6efd;
+  border-right-color: #0d6efd;
+}
+
+/* --- Main Content Styling --- */
+.main-content {
+  flex-grow: 1;
+}
+
+/* --- Header (Navbar Atas) Sticky --- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ffffff; /* Ubah ke putih agar lebih bersih */
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.tab-content {
+  padding: 2rem;
+}
+
+.header .input-group {
+  max-width: 400px;
+}
+
+.header .form-control,
+.header .input-group-text {
+  background-color: #f7f8fa; /* Sedikit beda warna */
+  border: 1px solid #dee2e6;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.user-profile i {
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--text-secondary-color);
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* --- Custom Cards --- */
+.summary-card {
+  border: none;
+  border-radius: 0.75rem;
+  color: white;
+  padding: 1.5rem;
+}
+.summary-card.bg-primary {
+  background-color: #2563eb !important;
+}
+.summary-card.bg-warning {
+  background-color: #fbbf24 !important;
+}
+.summary-card.bg-success {
+  background-color: #16a34a !important;
+}
+.summary-card .title {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+.summary-card .value {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+.card {
+  border: none;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.project-card img {
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.notification-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+.notification-item:last-child {
+  border-bottom: none;
+}
+.notification-item img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
+}
+/* Styling untuk Rating Bintang */
+.star-rating {
+  font-size: 1.5rem;
+  color: #d3d3d3; /* Warna bintang default (abu-abu) */
+  cursor: pointer;
+}
+.star-rating .fas.fa-star.selected,
+.star-rating .fas.fa-star:hover,
+.star-rating .fas.fa-star:hover ~ .fas.fa-star {
+  color: #ffc107; /* Warna bintang saat dipilih atau di-hover (kuning) */
+}
+.star-rating .fas.fa-star:hover ~ .fas.fa-star {
+  color: #d3d3d3; /* Kembalikan warna bintang setelahnya ke default */
+}

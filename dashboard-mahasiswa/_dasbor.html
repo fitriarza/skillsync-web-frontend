@@ -1,0 +1,108 @@
+<main>
+  <div class="row">
+    <div class="col-lg-8">
+      <h4 class="mb-4 fw-bold">Ringkasan Aktivitas</h4>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card summary-card bg-primary">
+            <div class="title">Lamaran Terkirim</div>
+            <div class="value">12</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card summary-card bg-warning text-dark">
+            <div class="title">Proyek Aktif</div>
+            <div class="value">3</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card summary-card bg-success">
+            <div class="title">Proyek Selesai</div>
+            <div class="value">5</div>
+          </div>
+        </div>
+      </div>
+
+      <h4 class="mt-5 mb-4 fw-bold">Rekomendasi Proyek Untuk Anda</h4>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card project-card">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070&auto=format&fit=crop" class="card-img-top" alt="Project Image"/>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Pengembangan Aplikasi Mobile</h5>
+              <p class="card-text text-muted mb-2">PT Nusa Digital</p>
+              <p class="card-text"><small class="text-muted">Skills: Flutter, Firebase, UI/UX</small></p>
+              <a href="#" class="btn btn-primary w-100 mt-3">Lihat Selengkapnya</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card project-card">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" class="card-img-top" alt="Project Image"/>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Analisis Data Big Data</h5>
+              <p class="card-text text-muted mb-2">Data Corp</p>
+              <p class="card-text"><small class="text-muted">Skills: Python, SQL, Tableau</small></p>
+              <a href="#" class="btn btn-primary w-100 mt-3">Lihat Selengkapnya</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title fw-bold mb-3">Proyek Aktif Anda</h5>
+          <div class="list-group list-group-flush">
+            <a href="#" class="list-group-item list-group-item-action px-0">
+              <div class="d-flex w-100 justify-content-between">
+                <h6 class="mb-1">Pengembangan Aplikasi Mobile</h6>
+                <span class="badge bg-primary rounded-pill">60%</span>
+              </div>
+              <small class="text-muted">PT Nusa Digital</small>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action px-0">
+              <div class="d-flex w-100 justify-content-between">
+                <h6 class="mb-1">Analisis Data Big Data</h6>
+                <span class="badge bg-primary rounded-pill">25%</span>
+              </div>
+              <small class="text-muted">Data Corp</small>
+            </a>
+          </div>
+          <button class="btn btn-outline-primary w-100 mt-3" onclick="document.getElementById('proyek-tab').click()">
+            Lihat Semua Proyek Aktif
+          </button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title mb-3 fw-bold">Notifikasi Terbaru</h5>
+          <div class="notification-list">
+            <div class="notification-item">
+              <img src="https://i.pravatar.cc/150?u=company1" alt="Company Logo"/>
+              <div>
+                <p class="mb-0 small">Lamaran Anda untuk "Website UMKM" telah dilihat.</p>
+                <small class="text-muted">15 menit yang lalu</small>
+              </div>
+            </div>
+            <div class="notification-item">
+              <img src="https://i.pravatar.cc/150?u=company2" alt="Company Logo"/>
+              <div>
+                <p class="mb-0 small">Pesan baru dari PT. Maju Bersama!</p>
+                <small class="text-muted">1 jam yang lalu</small>
+              </div>
+            </div>
+            <div class="notification-item">
+              <img src="https://i.pravatar.cc/150?u=company3" alt="Company Logo"/>
+              <div>
+                <p class="mb-0 small">Selamat! Anda diterima pada proyek "Data Entry".</p>
+                <small class="text-muted">Kemarin</small>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="btn btn-outline-secondary w-100 mt-3 fw-semibold">Lihat Semua Notifikasi</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

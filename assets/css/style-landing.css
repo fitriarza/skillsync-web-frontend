@@ -1,0 +1,425 @@
+/* assets/css/style-landing.css */
+
+/* Definisi Variabel Warna dan Pengaturan Dasar */
+:root {
+  /* Color Palette Baru Sesuai Permintaan */
+  --color-primary: #2563eb;
+  --color-warning: #fbbf24;
+  --color-success: #16a34a;
+  --color-bg-main: #f7f8fa;
+  --color-bg-card: #ffffff;
+  --color-text-primary: #333333;
+  --color-text-secondary: #6b7280;
+  --color-footer-dark: #212529;
+  --font-primary: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-primary);
+  background-color: var(--color-bg-main);
+  color: var(--color-text-primary);
+  padding-top: 70px; /* Ruang untuk navbar */
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 80px 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 60px;
+}
+
+/* Penataan Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #e0e0e0;
+  z-index: 1000;
+  padding: 15px 0;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-text-primary);
+  font-weight: 500;
+  transition: color 0.3s ease;
+  font-size: 15px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--color-primary);
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+  margin-left: 20px;
+}
+
+.btn {
+  padding: 10px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: none;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-register {
+  background-color: var(--color-warning);
+  color: var(--color-text-primary);
+}
+.btn-login {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+/* Penataan Hero Section */
+.hero-section {
+  background-color: var(--color-bg-card);
+}
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+.hero-text {
+  flex: 1;
+  max-width: 50%;
+}
+.hero-text h1 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.hero-text p {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 30px;
+}
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+.hero-buttons .btn {
+  padding: 12px 28px;
+}
+.btn-kampus {
+  background-color: var(--color-success);
+  color: white;
+}
+.btn-mahasiswa {
+  background-color: var(--color-warning);
+  color: var(--color-text-primary);
+}
+.btn-perusahaan {
+  background-color: var(--color-primary);
+  color: white;
+}
+.hero-image {
+  flex: 1;
+  text-align: center;
+}
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Penataan "Dibuat Untuk Anda" */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.feature-card {
+  background-color: var(--color-bg-card);
+  padding: 40px 30px;
+  text-align: center;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+.feature-card img {
+  width: 70px;
+  margin-bottom: 20px;
+}
+.feature-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+.feature-card p {
+  color: var(--color-text-secondary);
+}
+
+/* Penataan Visi & Misi */
+.vision-mission-section {
+  text-align: center;
+  background-color: var(--color-bg-card);
+}
+.vision-mission-section h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+} /* Warna h3 mengikuti warna utama (biru) */
+.vision-mission-section p,
+.vision-mission-section li {
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+.vision-mission-section .mission-content {
+  margin-top: 40px;
+}
+.vision-mission-section ul {
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+  max-width: 700px;
+}
+.vision-mission-section li {
+  margin-bottom: 15px;
+}
+
+/* Penataan Proyek */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+.project-card {
+  background-color: var(--color-bg-card);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+.project-card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.project-card-body {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.project-tag {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 15px;
+  align-self: flex-start;
+}
+.tag-web {
+  background-color: var(--color-primary);
+}
+.tag-data {
+  background-color: var(--color-success);
+}
+.tag-design {
+  background-color: var(--color-warning);
+  color: var(--color-text-primary);
+} /* Mengganti ungu dengan kuning */
+.project-card h3 {
+  margin-top: 0;
+}
+.project-card p {
+  color: var(--color-text-secondary);
+}
+.project-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+  margin-top: auto;
+}
+.btn-detail {
+  background-color: var(--color-primary);
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Penataan Testimoni */
+.testimonial-section {
+  background-color: var(--color-bg-card);
+}
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.testimonial-card {
+  background-color: var(--color-bg-main);
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #e8e8e8;
+}
+.testimonial-card p {
+  font-style: italic;
+  color: var(--color-text-secondary);
+  margin-top: 0;
+}
+.testimonial-author {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+.testimonial-author span {
+  display: block;
+  font-weight: 400;
+  color: #777;
+  font-size: 14px;
+}
+
+/* Penataan Mitra */
+.logo-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px 60px;
+}
+.logo-grid img {
+  max-height: 55px;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: filter 0.3s, opacity 0.3s;
+}
+.logo-grid img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* Penataan CTA & Footer */
+.cta-section {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+.cta-section h2 {
+  color: white;
+  font-size: 2.5rem;
+}
+.cta-section p {
+  max-width: 600px;
+  margin: -20px auto 30px auto;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+.footer {
+  background-color: var(--color-footer-dark);
+  color: #ccc;
+  text-align: center;
+  padding: 25px 0;
+}
+.footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .nav-links {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    padding-top: 60px;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  .hero-content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .hero-text {
+    max-width: 100%;
+  }
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+  .hero-buttons {
+    justify-content: center;
+  }
+  .feature-grid,
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+  .logo-grid img {
+    max-height: 40px;
+  }
+}

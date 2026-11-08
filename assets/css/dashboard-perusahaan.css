@@ -1,0 +1,134 @@
+:root {
+  --bs-primary: #0d6efd;
+  --bs-primary-rgb: 13, 110, 253;
+  --bs-body-font-family: "Poppins", sans-serif;
+  --bs-body-bg: #f5f7fb;
+  --sidebar-bg: #ffffff;
+  --sidebar-link-color: #5a6a85;
+  --sidebar-link-active-color: #0d6efd;
+  --sidebar-link-active-bg: #e9f2ff;
+  --sidebar-width: 260px; /* Variabel untuk lebar sidebar */
+}
+
+body {
+  font-family: var(--bs-body-font-family);
+  background-color: var(--bs-body-bg);
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.sidebar {
+  width: var(--sidebar-width);
+  background: var(--sidebar-bg);
+  transition: all 0.3s;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sidebar .sidebar-header {
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--bs-primary);
+  border-bottom: 1px solid #e9ecef;
+}
+
+.sidebar-nav {
+  padding: 1rem 0;
+}
+
+.sidebar-nav .nav-link {
+  padding: 12px 25px;
+  font-size: 1rem;
+  color: var(--sidebar-link-color);
+  display: flex;
+  align-items: center;
+  border-left: 4px solid transparent;
+  font-weight: 500;
+}
+
+.sidebar-nav .nav-link i {
+  width: 25px;
+  margin-right: 15px;
+  text-align: center;
+}
+
+.sidebar-nav .nav-link:hover {
+  color: var(--sidebar-link-active-color);
+}
+
+.sidebar-nav .nav-link.active {
+  background-color: var(--sidebar-link-active-bg);
+  color: var(--sidebar-link-active-color);
+  border-left: 4px solid var(--sidebar-link-active-color);
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin-left: var(--sidebar-width);
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.main-header .user-profile {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.main-header .user-profile img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.card {
+  border: none;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.summary-card {
+  color: white;
+}
+.summary-card .icon {
+  font-size: 2.5rem;
+  opacity: 0.3;
+}
+.summary-card .value {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+.badge {
+  padding: 0.4em 0.8em;
+  font-weight: 500;
+}
+
+.applicant-card .card-body {
+  position: relative;
+}
+.applicant-card .btn-group {
+  width: 100%;
+}
+.applicant-card .card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
