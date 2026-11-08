@@ -10,6 +10,30 @@ SkillSync introduces a project-based internship marketplace where companies can 
 
 The platform also includes a campus-oriented interface to support the connection between students, educational institutions, and companies.
 
+## 📸 Application Preview
+
+The following screenshots showcase the user interface and dashboard designs included in the SkillSync prototype.
+
+<p align="center">
+  <strong>Landing Page</strong><br>
+  <img src="screenshots/landing-page.jpeg" width="70%" alt="SkillSync Landing Page">
+</p>
+
+<p align="center">
+  <strong>Student Dashboard</strong><br>
+  <img src="screenshots/dashboard-mahasiswa.jpeg" width="70%" alt="Student Dashboard">
+</p>
+
+<p align="center">
+  <strong>Company Dashboard</strong><br>
+  <img src="screenshots/dashboard-perusahaan.jpeg" width="70%" alt="Company Dashboard">
+</p>
+
+<p align="center">
+  <strong>Campus Dashboard</strong><br>
+  <img src="screenshots/dashboard-kampus.jpeg" width="70%" alt="Campus Dashboard">
+</p>
+
 ## ✨ Main Features & Interfaces
 
 The prototype includes several interfaces representing different user roles:
